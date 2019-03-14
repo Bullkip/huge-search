@@ -15,6 +15,11 @@ main {
 	margin-top: 40px;
 }
 
+.content {
+	width: 100%;
+	font-size: 0;
+	padding: 0 10%;
+}
 .main-form {
 	position: relative;
 	width: 100%;
@@ -52,17 +57,15 @@ main {
 
 input[type="search"] {
 	color:  #ec5a62;
+	width: inherit;
 }
 
 input::placeholder{
 	color: #c2c2c2;
 }
 
-.content {
-	width: 100%;
-	font-size: 0;
-	/*margin-top: 30px;*/
-	padding: 0 10%;
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
 }
 
 section {
@@ -96,11 +99,14 @@ h2 {
 }
 
 span {
-	display: inline-block;
-	margin-left: 10px;
-	font-size: 14px;
-	font-weight: bold;
-	vertical-align: middle;	
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 70%;
+    max-height: 53px;
+    overflow: hidden;	
 }
 
 a {
@@ -129,3 +135,9 @@ li:hover {
 	color: #ec5a62;
 }
 
+@media screen and (max-width: 800px) {
+	.section {
+		display: block;
+		
+	}
+}
